@@ -1,4 +1,4 @@
-#If running thee commands manually (e.g. if this script fails), switch to root/superuser (sudo su).
+#If running these commands manually (e.g. if this script fails), switch to root/superuser (sudo su).
 
 #Set the mysql-server password to avoid the prompt later.
 debconf-set-selections <<< 'mysql-server mysql-server/root_password password MyRootPassw0rd'
