@@ -25,7 +25,7 @@ aptitude -y install apache2-mpm-worker \
 #Install Bower, needed by OpenScholar's build script.
 npm install bower -g
 
-#Allow Bower to run via root user; otherwise Openscholar's build script will fail.
+#Allow Bower to run via root user; otherwise OpenScholar's build script will fail.
 echo '{ "allow_root": true }' > /root/.bowerrc
 
 #Symlink nodejs to node to prevent issue later. See: https://github.com/nodejs/node-v0.x-archive/issues/3911
@@ -79,11 +79,11 @@ service apache2 restart
 #Symlink /var/www/os/www to /var/www/html/openscholar so that Apache recognizes it
 ln -s /var/www/os/www /var/www/html/openscholar
 
-#Create the file with VirtualHost configuration in /etc/apache2/site-enabled/
+#Create the file with VirtualHost configuration in /etc/apache2/sites-enabled/
 sh -c "echo '<VirtualHost *:80>
-        DocumentRoot /var/www/www/
+        DocumentRoot /var/www/html/openscholar/
         ServerName openscholar.lh
-        <Directory /var/www/www/>
+        <Directory /var/www/html/openscholar/>
                 Options +Indexes +FollowSymLinks +MultiViews +Includes
                 AllowOverride All
                 Order allow,deny
