@@ -1,4 +1,4 @@
-#Vagrant + Openscholar
+# Vagrant + Openscholar
 
 This simple Vagrant configuration will load up a Ubuntu virtual box and will begin installing OpenScholar and all the dependencies needed to build it it.
 
@@ -8,7 +8,7 @@ This simple Vagrant configuration will load up a Ubuntu virtual box and will beg
 2. On your personal system, add "192.168.44.46	openscholar.lh"  to your hostfile (alter the IP as necessary).
 3. When the script is finished, go to http://openscholar.lh/install.php to start the install process and make sure to select the "OpenScholar" profile.
 4. When asked about the database, enter "openscholar" for the database name, "drupaluser" for the database user, and "MyPassw0rd" for the password. You can change these as necessary in the provisioning script "provisioning/installs.sh".
-..* NOTE: If, for whatever reason, you need to connect directly as root, the root mysql password is "MyRootPassw0rd".
+* NOTE: If, for whatever reason, you need to connect directly as root, the root mysql password is "MyRootPassw0rd".
 
 ## Notes
 
