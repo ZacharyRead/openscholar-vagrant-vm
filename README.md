@@ -1,4 +1,4 @@
-# Vagrant + Openscholar
+# Vagrant + OpenScholar
 
 This simple Vagrant configuration will load up a Ubuntu virtual box and will begin installing OpenScholar and all the dependencies needed to build it it.
 
